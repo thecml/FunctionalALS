@@ -2,12 +2,15 @@ from pathlib import Path
 
 # Directories
 ROOT_DIR = Path(__file__).absolute().parent.parent
-DATA_DIR = Path.joinpath(ROOT_DIR, "data")
+PROACT_DATA_DIR = Path.joinpath(ROOT_DIR, "data/proact")
+CALSNIC_DATA_DIR = Path.joinpath(ROOT_DIR, "data/calsnic")
 MODELS_DIR = Path.joinpath(ROOT_DIR, 'models')
 CONFIGS_DIR = Path.joinpath(ROOT_DIR, 'configs')
 RESULTS_DIR = Path.joinpath(ROOT_DIR, 'results')
 PLOTS_DIR = Path.joinpath(ROOT_DIR, 'plots')
 MISC_DIR = Path.joinpath(ROOT_DIR, 'misc')
+HIERARCH_CONFIGS_DIR = Path.joinpath(CONFIGS_DIR, 'hierarch')
+MENSA_CONFIGS_DIR = Path.joinpath(CONFIGS_DIR, 'mensa')
 
 PATIENT_COLS = ['PSCID', 'Visit Label', 'Diagnosis', 'Age', 'Sex', 'Handedness',
                 'MedicalExamination_Riluzole', 'YearsEd', 'SymptomOnset_Date',

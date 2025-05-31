@@ -52,16 +52,16 @@ if __name__ == "__main__":
     demographics_fn = 'PROACT_DEMOGRAPHICS.csv'
     vital_signs_fn = 'PROACT_VITALSIGNS.csv'
         
-    alsfrs_df = pd.read_csv(Path.joinpath(cfg.DATA_DIR, alsfrs_fn))
-    history_df = pd.read_csv(Path.joinpath(cfg.DATA_DIR, alshistory_fn))
-    fvc_df = pd.read_csv(Path.joinpath(cfg.DATA_DIR, fvc_fn))
-    handgrip_str_df = pd.read_csv(Path.joinpath(cfg.DATA_DIR, handgrip_str_fn))
-    muscle_str_df = pd.read_csv(Path.joinpath(cfg.DATA_DIR, muscle_str_fn))
-    riluzole_df = pd.read_csv(Path.joinpath(cfg.DATA_DIR, riluzole_fn))
-    elescorial_df = pd.read_csv(Path.joinpath(cfg.DATA_DIR, elescorial_fn))
-    deathdata_df = pd.read_csv(Path.joinpath(cfg.DATA_DIR, deathdata_fn))
-    demographics_df = pd.read_csv(Path.joinpath(cfg.DATA_DIR, demographics_fn))
-    vital_signs_df = pd.read_csv(Path.joinpath(cfg.DATA_DIR, vital_signs_fn))
+    alsfrs_df = pd.read_csv(Path.joinpath(cfg.PROACT_DATA_DIR, alsfrs_fn))
+    history_df = pd.read_csv(Path.joinpath(cfg.PROACT_DATA_DIR, alshistory_fn))
+    fvc_df = pd.read_csv(Path.joinpath(cfg.PROACT_DATA_DIR, fvc_fn))
+    handgrip_str_df = pd.read_csv(Path.joinpath(cfg.PROACT_DATA_DIR, handgrip_str_fn))
+    muscle_str_df = pd.read_csv(Path.joinpath(cfg.PROACT_DATA_DIR, muscle_str_fn))
+    riluzole_df = pd.read_csv(Path.joinpath(cfg.PROACT_DATA_DIR, riluzole_fn))
+    elescorial_df = pd.read_csv(Path.joinpath(cfg.PROACT_DATA_DIR, elescorial_fn))
+    deathdata_df = pd.read_csv(Path.joinpath(cfg.PROACT_DATA_DIR, deathdata_fn))
+    demographics_df = pd.read_csv(Path.joinpath(cfg.PROACT_DATA_DIR, demographics_fn))
+    vital_signs_df = pd.read_csv(Path.joinpath(cfg.PROACT_DATA_DIR, vital_signs_fn))
 
     # Create dataframe with subjects
     df = pd.DataFrame()
@@ -78,8 +78,8 @@ if __name__ == "__main__":
     
     # Annotate events
     threshold = 2
-    event_names = ['Speech', 'Swallowing', 'Handwriting', 'Walking']
-    event_cols = ['Q1_Speech', 'Q3_Swallowing', 'Q4_Handwriting', 'Q8_Walking']
+    event_names = ['Speech', 'Swallowing', 'Handwriting', 'Walking', 'Dyspnea']
+    event_cols = ['Q1_Speech', 'Q3_Swallowing', 'Q4_Handwriting', 'Q8_Walking', 'R_1_Dyspnea']
     for event_name, event_col in zip(event_names, event_cols):
         alsfrs_df[f'Event_{event_name}'] = (alsfrs_df[event_col] <= threshold).astype(int)
         event_df = alsfrs_df.groupby('subject_id').apply(annotate_event, f'Event_{event_name}').reset_index()
@@ -178,4 +178,4 @@ if __name__ == "__main__":
     df = df.reset_index(drop=True)
     
     # Save df
-    df.to_csv(f'{cfg.DATA_DIR}/proact_processed.csv')
+    df.to_csv(f'{cfg.PROACT_DATA_DIR}/proact_processed.csv')
