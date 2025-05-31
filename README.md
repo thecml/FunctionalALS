@@ -9,7 +9,7 @@ The code was tested in a virtual environment with `Python 3.9`.
 
 How to use
 --------
-1. Install requirements by running: pip install -r requirements.txt
+1. Install requirements by running: `pip install -r requirements.txt`
 2. Download the PRO-ACT dataset from [the PRO-ACT website](https://ncri1.partners.org/ProACT)
 3. Make directories `mkdir data` and `mkdir results`
 4. Put the PRO-ACT files inside the data directory and run `python src/make_dataset.py`
