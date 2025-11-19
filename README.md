@@ -1,6 +1,6 @@
 # FunctionalALS
-Source code for "A meaningful prediction of functional decline in amyotrophic lateral sclerosis based on multi-event survival analysis", 2024.
-Under review.
+Source code for "A meaningful prediction of functional decline in amyotrophic lateral sclerosis based on multi-event survival analysis", 2025.
+**Full paper (open-access)**: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0336476
 
 Requirements
 --------
@@ -17,4 +17,17 @@ How to use
 
 Citation
 --------
-TBA
+If you find this paper useful in your work, please consider citing it.
+
+```bibtex
+@article{10.1371/journal.pone.0336476,
+    doi = {10.1371/journal.pone.0336476},
+    author = {Lillelund, Christian Marius AND Kalra, Sanjay AND Greiner, Russell AND The Pooled Resource Open-Access ALS Clinical Trials Consortium (PRO-ACT)},
+    journal = {PLOS ONE},
+    title = {A meaningful prediction of functional decline in amyotrophic lateral sclerosis based on multi-event survival analysis},
+    year = {2025},
+    volume = {20},
+    pages = {1-16},
+    number = {11},
+}
+```
