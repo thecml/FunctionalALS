@@ -1,5 +1,5 @@
 # FunctionalALS
-Source code for "A meaningful prediction of functional decline in amyotrophic lateral sclerosis based on multi-event survival analysis", 2025.
+Source code for "A meaningful prediction of functional decline in amyotrophic lateral sclerosis based on multi-event survival analysis", 2025.<br>
 **Full paper (open-access)**: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0336476
 
 Requirements
