@@ -1,6 +1,9 @@
-# FunctionalALS
-A meaningful prediction of functional decline in amyotrophic lateral sclerosis based on multi-event survival analysis, 2025.<br>
-**Full paper (open-access)**: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0336476
+# A meaningful prediction of functional decline in amyotrophic lateral sclerosis based on multi-event survival analysis (2025)
+
+**Accepted in PLOS One**  
+[Full paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0336476)
+
+This work introduces a multi-event survival model that predicts when ALS patients are likely to experience functional decline across five key abilities. Using the PRO-ACT dataset (N=3220), the method provides individualized survival curves for each function and enables counterfactual predictions to assess how changes in clinical variables affect expected decline.
 
 Requirements
 --------
