@@ -23,7 +23,7 @@ Citation
 If you find this paper useful in your work, please consider citing it.
 
 ```bibtex
-@article{10.1371/journal.pone.0336476,
+@article{lillelund_meaningful_2025,
     doi = {10.1371/journal.pone.0336476},
     author = {Lillelund, Christian Marius and Kalra, Sanjay and Greiner, Russell and {The Pooled Resource Open-Access ALS Clinical Trials Consortium (PRO-ACT)}},
     journal = {PLOS ONE},
